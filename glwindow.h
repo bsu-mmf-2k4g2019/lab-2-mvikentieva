@@ -24,27 +24,26 @@ protected:
 private:
     // Shader programms
     QOpenGLShaderProgram m_prog_pyramid;
-    QOpenGLShaderProgram m_prog_triangle;
     QOpenGLShaderProgram m_prog_hexagonalPrism;
+    QOpenGLShaderProgram m_prog_cube;
 
     // VAOs
     GLuint m_vao_pyramid_id;
-    GLuint m_vao_triangle_id;
     GLuint m_vao_hexagonalPrism_id;
+    GLuint m_vao_cube_id;
 
     // Textures
     GLuint m_texture_bg_id;
     GLuint m_texture_smile_id;
 
     // Uniforms
-    GLint  m_triangle_color_id;
+    GLint  m_hexagonalPrism_color_id;
 
     QVector3D camera_pos;
     QVector3D camera_up;
     QVector3D camera_front;
+    QVector3D pressPosition;
 
-    QTime frame_delta_time;
-    QTime last_frame_time;
 };
 
 #endif // WIDGET_H
